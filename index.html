@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es"> <!-- Lenguaje en español-->
+    <head>
+        <meta charset="UTF-8"> <!-- Utilizar el formado de codificación UTF-8 -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Compatibilidad con el navegador-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Restaurant els coberts</title> <!-- Titulo de la Pagina-->
+        <link rel="icon" href="img/nosaltres2.jpg"> <!-- Poner un icono en la pestaña -->
+        <link rel="stylesheet" href="css/style.css"> <!-- Llamar a mis estilos css -->
+    </head>
+    <body>
+        <!-- Parte 1 Cabecera Maquetación Float -->
+        <header class="cabecera">
+            <nav class="navegacion">
+                <ul>
+                    <li><a href="#">Nosaltres</a></li>
+                    <li><a href="#">Corts</a></li>
+                    <li><a href="#">Galeria</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- Parte 1/2 Imagen Principal (Importado desde CSS y maquetación Position) -->
+        <div class="main">
+            <div class="imgP">
+                <div class="oscuro">
+                    <div class="titulo">
+                        <h1>Restaurant <span>els coberts</span></h1>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, hic.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Contener todos los elementos y centrarlo -->
+            <div class="contenedor">
+                <!-- Comenzar estructurar los elementos -->
+                <!-- Parte 2 Estructura de la Maquetación Float -->
+                <div class="nosotros">
+                    <h2>Sobre nosaltres</h2>
+                    <div class="seccion1">
+                        <img src="img/nosaltres1.jpg" alt="Imagen 1 Nosaltres">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora hic repudiandae asperiores saepe sequi nulla ratione odit voluptatum at vero impedit sunt optio reiciendis, ipsam nesciunt earum fuga magnam quisquam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor delectus totam iusto doloremque praesentium nam, architecto dicta vitae eum, ea aspernatur quos, illo beatae atque amet! Impedit qui excepturi laudantium.</p>
+                    </div>
+                    <div class="seccion2">
+                        <img src="img/nosaltres2.jpg" alt="Imagen 2 Nosaltres">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis nisi necessitatibus dicta provident quidem alias labore mollitia impedit repellat? Libero, sapiente illum molestias quas quidem quo amet placeat fugiat reiciendis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, velit provident, labore quaerat reprehenderit voluptatibus placeat officia, pariatur totam alias optio quisquam soluta! Unde delectus architecto, ipsam vero quo et.architecto, ipsam vero quo et. Lorem, ipsum dolor.</p>
+                    </div>
+                </div>
+                <!-- Parte 3 Estructura de la Maquetación Grid -->
+                <div class="carta-grid">
+                    <h2>Carta</h2>
+                    <div class="menu">
+                        <h2>Menú</h2>
+                    </div>
+                    <!-- Contener todos los elementos (Compuesto por 2 partes, el 1r Menu y el de abajo)-->
+                    <div class="menu-container">
+                        <!-- Contener cada elemento en un div (Los 2 Menus tiene que tener 4 elementos) -->
+                        <div class="menu-item">
+                            <div class="menu1">Menu1</div>
+                        </div>
+                        <div class="menu-item">
+                            <h2 class="menu1">Contingut</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque beatae nesciunt iusto recusandae officia ipsum totam necessitatibus velit, itaque earum soluta perferendis reiciendis rerum vero. Eum voluptatem nesciunt fuga numquam?</p>
+                        </div>
+                        <div class="menu-item">
+                            <img class="imagen" src="img/menu_pasta.jpg" alt="Menu Pasta">
+                            <p>Pasta</p>
+                        </div>
+                        <div class="menu-item">
+                            <img class="imagen" src="img/menu_starter.jpg" alt="Menu Starter">
+                            <p>Arrancadora</p>
+                        </div>
+                    </div>
+                    <!-- El 2n Menu -->
+                    <div class="menu-container">
+                        <!-- Igual que el 1r ya que tiene 4 elementos y no hay que agregar un 5t-->
+                        <div class="menu-item">
+                            <div class="menu2">Menu2</div>
+                        </div>
+                        <div class="menu-item">
+                            <h2 class="menu1">Contingut</h2>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est, perspiciatis aperiam. Repellat rem atque excepturi itaque ullam! Temporibus laborum, magni maiores quas quia exercitationem doloribus quisquam in, nulla sit enim.</p>
+                        </div>
+                        <div class="menu-item">
+                            <img class="imagen" src="img/menu_meat.jpg" alt="Menu Meat">
+                            <p>Carne</p>
+                        </div>
+                        <div class="menu-item">
+                            <img class="imagen" src="img/menu_fish.jpg" alt="Menu Fish">
+                            <p>Pescado</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Titulo De la Galeria -->
+                <h2 class="title-galeria">Galeria d'Imatges</h2>
+                <!-- Parte 4 Estructura de la maquetación Flex -->
+                <div class="galeria-flex">
+                    <!-- No hace falta contener las imagenes en cada div (Solamente en la maquetación Grid) -->
+                    <img src="img/img_salad.jpg" alt="Menu Ensalada">
+                    <img src="img/img_salad.jpg" alt="Menu Ensalada">
+                    <img src="img/img_salad.jpg" alt="Menu Ensalada">
+                    <img src="img/img_salad.jpg" alt="Menu Ensalada">
+                    <img src="img/img_salad.jpg" alt="Menu Ensalada">
+                    <img src="img/img_salad.jpg" alt="Menu Ensalada">
+                    <img src="img/img_salad.jpg" alt="Menu Ensalada">
+                    <img src="img/img_salad.jpg" alt="Menu Ensalada">
+
+                </div>
+            </div>
+        </div>
+        <!-- Parte 4 Footer (Tengo libertad de utilizar cualquier maquetación) -->
+        <footer class="piePagina">
+                <div class="contacto">
+                    <img src="img/ic_contact.jpg" alt="Correo"><p>jvalle@jaumebalmes.net</p>
+                    <img src="img/ic_phone.jpg" alt="Telefono"><p>999 99 99 99</p>
+                </div>
+                <div class="pagina">
+                    <p>Restaurant Els Coberts</p>
+                </div>
+        </footer>
+    </body>
+</html>
