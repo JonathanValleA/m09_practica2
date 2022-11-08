@@ -226,6 +226,7 @@ body {
     .cabecera{background: rgba(255,255,255);}
     .cabecera .navegacion{float: left;}
     .cabecera .navegacion ul li a {color: rgba(0,0,0); font-weight: bold;}
+    .cabecera .navegacion ul li a:hover{ border-bottom: 1px solid #000;}
     .main .imgP {background-position: right center;}
     .main .imgP .oscuro .titulo {left: 0.9375rem;}
     .main .imgP .oscuro .titulo h1 {font-size: 3rem;}
