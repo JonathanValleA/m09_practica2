@@ -1,3 +1,4 @@
+$colorB: #fff;
 /* Estilos Generales */
 * {
     margin: 0; 
@@ -8,7 +9,7 @@
 }
 /* Estilos en todo el Body */
 body {
-    color: #fff;
+    color: $colorB;
     /*font-family: "Century Gothic";*/
     font-size: 16px; /* El tamaño del elemento Raíz para aplicar la unidad de medida REM */
 }

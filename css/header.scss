@@ -1,0 +1,35 @@
+$colorB: #fff;
+$bg: rgb(0,0,0);
+/* Estilos de la Cabecera (Header) */
+.cabecera{
+    width: 100%;
+    height: 60px;
+    background: $bg;
+    position: sticky;
+    top: 0;
+    z-index: 999999;
+    /* Parte 1 Float */
+    .navegacion{
+        float: right;
+        /* Para calcular la medida "rem" se divide los 20px/16px del body (20/16 = 1.25) */
+/* I viceversa, para calcular los px de la medida rem se multiplica (1.25*16 = 20px) */ 
+        ul{
+            margin: 1.25rem 1.875rem;
+            li{
+                display: inline;
+                padding: 1.25rem;
+                a{
+                    color: $colorB;
+                    opacity: .8;
+                    font-style: none;
+                    text-decoration: none;
+                    &:hover{
+                        opacity: 1;
+                        border-bottom: 1px solid $colorB;
+                        transition: 1s ease all;
+                    }
+                }
+            }
+        }
+    }
+}
