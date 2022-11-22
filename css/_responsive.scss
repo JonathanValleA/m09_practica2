@@ -1,0 +1,107 @@
+// Variables 
+$colorN: #000;
+$bg: #fff;
+$tm-maxim: 100%;
+// Funcion para el posicionamiento de la Imagen del section
+@mixin pos_section {
+    float: none;
+    width: $tm-maxim;
+    height: 270px;
+}
+/* Responsive Design  */
+@media screen and (max-width: 768px) {
+    .cabecera{
+        background: $bg;
+        .navegacion{
+            float: left;
+            ul li a{
+                color: rgb(0,0,0);
+                font-weight: bold;
+                // Aniuament del hover
+                &:hover{ border-bottom: 1px solid $colorN; }
+            }
+        }
+    }
+    .main {
+        .imgP{
+            height: 250px;
+            .oscuro {
+                .titulo{
+                    position: relative;
+                    top: 2rem;
+                    left: 0.9375rem;
+                    h1{ font-size: 3rem; }
+                    p{ width: 60%; }
+                }
+            }
+        }
+        .contenedor{
+            .nosotros{
+                .seccion1{
+                    p{
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                    }
+                    img{
+                        @include pos_section
+                    }
+                }
+                .seccion2{
+                    p{
+                        position: relative;
+                        left: 0.625rem;
+                        // left: 0;
+                    }
+                    img{
+                        @include pos_section;
+                        margin: 0.9375rem 0;
+                    }
+                }
+            }
+            .carta-grid{
+                margin: 2rem 0;
+                .menu-item{
+                    &:nth-child(1){ grid-row-start: span 3; }
+                    &:nth-child(3), &:nth-child(4){ grid-column-start: span 2; }
+                }
+            }
+            .title-galeria{ text-align: center; }
+            .galeria-flex{
+                img{ width: 35%; }
+        }
+        }
+    }
+}
+@media screen and (max-width: 576px) {
+    .main{
+        .imgP{
+            .oscuro{
+                .titulo{
+                    h1{font-size: 2.2rem;}
+                    p{
+                        width: $tm-maxim;
+                        margin: 0 -1.0625rem;
+                    }
+                }
+            }
+        }
+        .contenedor{
+            .carta-grid{
+                .menu-container{
+                    .menu-item{
+                        p{ text-align: justify; }
+                        &:nth-child(1){ grid-column-start: span 3; padding: 15px }
+                        &:nth-child(2){ grid-column-start: span 3; }
+                        &:nth-child(3), &:nth-child(4) { grid-column-start: span 3; }
+                        &:nth-child(3) p{text-align: center;}
+                        &:nth-child(4) p{text-align: center;}
+                    }
+                }
+            }
+            .galeria-flex{
+                img{ width: $tm-maxim; }
+            }
+        }
+    }
+}
