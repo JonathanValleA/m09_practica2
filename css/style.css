@@ -1,0 +1,340 @@
+/* Estilos Generales */
+* {
+    margin: 0; 
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/* Estilos en todo el Body */
+body {
+    color: #fff;
+    /*font-family: "Century Gothic";*/
+    font-size: 16px; /* El tamaño del elemento Raíz para aplicar la unidad de medida REM */
+}
+.rentangulo {
+    fill: none;
+    stroke: rgb(188, 132, 53);
+    stroke-width: 3;
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    position: absolute;
+    top: -50px;
+    animation: animacion 1s ease-in-out forwards;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    opacity: 0;
+}
+
+@keyframes animacion {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    to{
+        stroke-dashoffset: 0;
+    }
+    from {
+        stroke-dasharray: 20%;
+    }
+}
+/* Estilos de la Cabecera (Header) */
+.cabecera{
+    width: 100%;
+    height: 60px;
+    background: rgb(0, 0, 0);
+    position: sticky;
+    top: 0;
+    z-index: 999999;
+    overflow: hidden;
+}
+.logo {
+    width: 50px;
+    height: 50px;
+    margin: 3px 20px;
+}
+/* Parte 1 Float */
+.cabecera .navegacion {float: right;}
+/* Para calcular la medida "rem" se divide los 20px/16px del body (20/16 = 1.25) */
+/* I viceversa, para calcular los px de la medida rem se multiplica (1.25*16 = 20px) */ 
+.cabecera .navegacion ul {margin: 1.25rem 1.875rem;}
+.cabecera .navegacion ul li {
+    display: inline;
+    padding: 1.25rem;
+}
+.cabecera .navegacion ul li a{
+    color: rgb(252, 252, 252);
+    opacity: .8;
+    font-style: none;
+    text-decoration: none;
+}
+.cabecera .navegacion ul li a:hover{
+    opacity: 1;
+    border-bottom: 1px solid #fff;
+    transition: 1s ease all;
+}
+/* Estilos del Cuerpo (Main) */
+/* Importamos la Imagen Principal en css y aplicamos unos cuantos estilos */
+.main .imgP {
+    width: 100%;
+    height: 550px;
+    background-image: url(../img/header.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+/* Oscurecemos la Imagen para que sobresalte el texto */
+.main .imgP .oscuro {
+    height: 100%;
+    background: rgba(0,0,0, .4);
+}
+.main .imgP .oscuro .titulo {
+	position: relative;
+    top: 12.5rem;
+    left: 8.75rem;
+    animation-name: titulo;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+.main .imgP .oscuro .titulo h1 {
+	font-size: 3.125rem;
+    font-weight:100;
+}
+.main .imgP .oscuro .titulo h1 span {font-weight: bold;}
+.main .imgP .oscuro .titulo p {
+    width: 40%;
+	text-align: center;
+    line-height: 2em;
+    position: relative;
+    right: 150px;
+    
+}
+
+@keyframes titulo {
+    0% {
+        opacity: 0;
+        color: rgba(222, 124, 68, 0.5);
+    }
+    50% {
+        opacity: .5;
+        color: rgba(222, 124, 68, 0.5);
+    }
+    100% {
+        opacity: 1;
+        color: rgba(255,255,255,1);
+    }
+}
+/* Contenemos todo el main excepto la Imagen principal y lo centramos */
+.main .contenedor {
+    width: 75%;
+    max-width: 1000px;
+    margin: auto;
+}
+.main .contenedor h2,
+.main .contenedor p{ color: #000;}
+.main .contenedor .nosotros h2 {margin-top: 50px;}
+/* Parte 2 Float */
+.main .contenedor .nosotros .seccion1 img {
+    margin: 1.25rem 0; 
+    width: 190px; 
+    height: 160px; 
+    float: left;
+    border-radius: 0.3125rem;
+}
+.main .contenedor .nosotros .seccion1 p {
+    width: 95%;
+    position: relative; 
+    top: 1.5625rem; 
+    left: 0.625rem;
+    text-align: justify;
+}
+.main .contenedor .nosotros .seccion2 {clear: both;}
+.main .contenedor .nosotros .seccion2 img {
+    width: 200px; 
+    height: 160px; 
+    float: right;
+    margin: -1.25rem 0.625rem;
+    border-radius: 0.3125rem;
+}
+.main .contenedor .nosotros .seccion2 p {width: 100%; text-align: justify; }
+.main .contenedor .carta-grid {
+    color: #000;
+    margin: 5rem 0;
+}
+.main .contenedor .carta-grid .menu h2 {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    background: rgb(6, 6, 104);
+    color: #fff;
+    margin: 1.25rem 0;
+    padding: 0.625rem 0;
+}
+/* Parte 3 Grid */
+.main .contenedor .carta-grid .menu-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 175px 1fr 1fr;
+    padding: 1.25rem 0;
+    grid-gap: 0.625rem;
+}
+.main .contenedor .carta-grid .menu-item:nth-child(3) p,
+.main .contenedor .carta-grid .menu-item:nth-child(4) p{color: #fff}
+.main .contenedor .carta-grid .menu-item{position: relative;}
+.main .contenedor .carta-grid .menu-item .menu1 {font-weight: bold;}
+.main .contenedor .carta-grid .menu-item:nth-child(1){
+    grid-row-start: span 2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid blue;
+    font-size: 1.3em;
+}
+.main .contenedor .carta-grid .menu-item:nth-child(3) p,
+.main .contenedor .carta-grid .menu-item:nth-child(4) p{
+    position: absolute;
+    bottom: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    left: 0; 
+    right: 0; 
+    text-align: center; 
+    background: rgba(0,0,0,.5);
+    padding: 10px;
+}
+.main .contenedor .carta-grid .menu-item:nth-child(2){  
+    grid-column-start: span 2;
+    line-height: 1.5625rem;
+}
+
+.main .contenedor .carta-grid .imagen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    position: relative;
+    bottom: 300px;
+}
+.main .contenedor .carta-grid .imagen:hover{
+    opacity: 1;
+    cursor: pointer;
+    transition: 1s ease all;
+}
+.main .contenedor .carta-grid .menu-item .menu {font-weight: none;}
+.main .contenedor .title-galeria{margin: -1.5625rem 0;}
+/* Parte 4 Flexbox */
+.main .contenedor .galeria-flex {
+    margin-top: 3.4375rem;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.main .contenedor .galeria-flex img {
+    width: 20%;
+    height: 120px;
+    object-fit: cover;
+    margin-bottom: 0.625rem;
+    margin-left: 0.625rem;
+    border: 1px solid #333;
+    padding: 2px;
+    flex: auto;
+}
+.main .contenedor .galeria-flex img:hover {
+    cursor: pointer;
+    transform: rotate(-1.2deg) scale(1.05);
+    transition: 0.6s ease-out;
+    filter: grayscale(0.9);
+    box-shadow: 1px 1px 3px #000;
+}
+.main .contenedor .galeria-flex img:nth-child(1),
+.main .contenedor .galeria-flex img:nth-child(4),
+.main .contenedor .galeria-flex img:nth-child(5),
+.main .contenedor .galeria-flex img:nth-child(8){
+    filter: grayscale(0.9);
+}
+/* Parte 5 Pie de Pagina */
+.piePagina {
+    margin-top: 2.5rem;
+    background: #000;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+.piePagina .contacto,
+.piePagina .pagina {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0 0.9375rem;
+    gap: 0.625rem;
+    font-size: 0.875rem;
+}
+.svg-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.circle {
+    display: inline-block;
+}
+.line {
+    display: inline-block;
+}
+/* Responsive Design  */
+@media screen and (max-width: 768px) {
+    .main .imgP{height: 250px;}
+    .cabecera{background: rgba(255,255,255);}
+    .cabecera .navegacion{float: left;}
+    .cabecera .navegacion ul li a {color: rgba(0,0,0); font-weight: bold;}
+    .cabecera .navegacion ul li a:hover{ border-bottom: 1px solid #000;}
+    .main .imgP {background-position: right center;}
+    .main .imgP .oscuro .titulo {left: 0.9375rem;}
+    .main .imgP .oscuro .titulo h1 {font-size: 3rem;}
+    .main .imgP .oscuro .titulo p {width: 60%;}
+    .main .contenedor .nosotros .seccion2 p {position: relative; left: 0.625rem;}
+    .main .imgP .oscuro .titulo{top: 2.5rem; font-size: 14px;}
+    .main .imgP .oscuro .titulo h1{font-size: 40px;}
+    .main .imgP .oscuro .titulo p {width: 100%; text-align: left;}
+
+    .main .contenedor .nosotros .seccion1 img {float: none; width: 100%; height: 270px;}
+    .main .contenedor .nosotros .seccion1 p {
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+    .main .contenedor .nosotros .seccion2 img {
+        float: none;
+        margin: 0.9375rem 0;
+        width: 100%;
+        height: 270px;
+    }
+
+    .main .contenedor .nosotros .seccion2 p{ left: 0;}
+    .main .contenedor .carta-grid {margin: 2rem 0;}
+    .main .contenedor .carta-grid .menu-item:nth-child(1){grid-row-start: span 3;}
+    .main .contenedor .carta-grid .menu-item:nth-child(3),
+    .main .contenedor .carta-grid .menu-item:nth-child(4){grid-column-start: span 2;}
+    .main .contenedor .title-galeria {text-align: center;}
+    .main .contenedor .galeria-flex img {width: 35%;}
+}
+@media screen and (max-width: 576px) {
+    .main .imgP .oscuro .titulo h1 {font-size: 2.2em;}
+    .main .imgP .oscuro .titulo p {width: 100%; margin: 0 -1.0625rem;}
+    .main .contenedor .carta-grid .menu-item:nth-child(1){grid-column-start: span 3; padding: 15px}
+    .main .contenedor .carta-grid .menu-item:nth-child(2){grid-column-start: span 3;}
+    .main .contenedor .carta-grid .menu-item:nth-child(3),
+    .main .contenedor .carta-grid .menu-item:nth-child(4){grid-column-start: span 3;}
+    .main .contenedor .carta-grid .menu-container .menu-item p {text-align: justify;}
+    .main .contenedor .galeria-flex img {width: 100%;}
+    .main .contenedor .carta-grid .menu-item:nth-child(3) p,
+    .main .contenedor .carta-grid .menu-item:nth-child(4) p{text-align: center;}
+}

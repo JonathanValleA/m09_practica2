@@ -5,25 +5,27 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Compatibilidad con el navegador-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Restaurant els coberts</title> <!-- Titulo de la Pagina-->
-        <link rel="icon" href="img/nosaltres2.jpg"> <!-- Poner un icono en la pestaña -->
+        <link rel="icon" href="img/LogoOriol2.png"> <!-- Poner un icono en la pestaña -->
         <!-- Llamar a mis estilos css -->
-        <!-- Varios archivos css en el html (No utilize ningun procesador pero lo he 
-            estructurado todo mi css para que sea mas visible y entendible el codigo) -->
-        <link rel="stylesheet" href="css/generales.css">
-        <link rel="stylesheet" href="css/header.css">
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/footer.css">
-        <link rel="stylesheet" href="css/responsive.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+            integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+            crossorigin="anonymous"></script>
+        <script src="js/script.js"></script>
     </head>
     <body>
         <!-- Parte 1 Cabecera Maquetación Float -->
         <header class="cabecera">
+            <img class="logo" src="img/LogoOriol2.png" alt="">
             <nav class="navegacion">
-                <ul>
+                <ul class="nav-item2">
+                    <svg class="rentangulo" width="400" height="400">
+                        <rect X="5" y="50" width="260" height="50">
+                    </svg>
                     <!-- Enlaces (No redirige a ningun sitio) -->
-                    <li><a href="#">Nosaltres</a></li>
-                    <li><a href="#">Corts</a></li>
-                    <li><a href="#">Galeria</a></li>
+                    <li><a class="nav-item" href="#">Nosaltres</a></li>
+                    <li><a class="nav-item" href="#">Corts</a></li>
+                    <li><a class="nav-item" href="#">Galeria</a></li>
                 </ul>
             </nav>
         </header>
@@ -44,11 +46,19 @@
                 <div class="nosotros">
                     <h2>Sobre nosaltres</h2>
                     <div class="seccion1">
-                        <img src="img/nosaltres1.jpg" alt="Imagen 1 Nosaltres">
+                        <picture>
+                            <source media="(max-width:768px)" srcset="img/nosaltres1_comprimido.png">
+                            <source media="(max-width:576px)" srcset="img/nosaltres1_comprimido.png">
+                            <img id="nosaltres1" src="img/nosaltres1_comprimido.png" alt="Flowers">
+                          </picture>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora hic repudiandae asperiores saepe sequi nulla ratione odit voluptatum at vero impedit sunt optio reiciendis, ipsam nesciunt earum fuga magnam quisquam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor delectus totam iusto doloremque praesentium nam, architecto dicta vitae eum, ea aspernatur quos, illo beatae atque amet! Impedit qui excepturi laudantium.</p>
                     </div>
                     <div class="seccion2">
-                        <img src="img/nosaltres2.jpg" alt="Imagen 2 Nosaltres">
+                        <picture>
+                            <source media="(max-width:768px)" srcset="img/nosaltres2_comprimido.png">
+                            <source media="(max-width:576px)" srcset="img/nosaltres2_comprimido.png">
+                            <img id="nosaltres1" src="img/nosaltres2_comprimido.png" alt="Flowers">
+                          </picture>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis nisi necessitatibus dicta provident quidem alias labore mollitia impedit repellat? Libero, sapiente illum molestias quas quidem quo amet placeat fugiat reiciendis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, velit provident, labore quaerat reprehenderit voluptatibus placeat officia, pariatur totam alias optio quisquam soluta! Unde delectus architecto, ipsam vero quo et.architecto, ipsam vero quo et. Lorem, ipsum dolor.</p>
                     </div>
                 </div>
@@ -120,6 +130,14 @@
                     <img src="img/ic_contact.jpg" alt="Correo"><p>jvalle@jaumebalmes.net</p>
                     <img src="img/ic_phone.jpg" alt="Telefono"><p>999 99 99 99</p>
                 </div>
+                <div class="svg-container">
+                    <svg width=50 height=50>
+                      <circle class="circle" cx="30" cy="30" r="15" stroke="blue" stroke-width="2" fill="orange"></circle>
+                      <line class="line" x1="15" y1="15" x2="45" y2="45" stroke="red" stroke-width="2"></line>
+                    </svg>
+                  </div>
+
+                
                 <div class="pagina">
                     <p>Restaurant Els Coberts</p>
                 </div>
